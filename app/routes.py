@@ -34,7 +34,7 @@ def index():
                 raise Exception("Forme non valide des parametres (dict).") from  e
         #flash('reward={}, variance={}'.format(estimated_reward, estimated_variance))
         #return redirect('/index')
-        result = plot_module(pmc, estimated_reward, estimated_variance, nb_run)
+        result = None#plot_module(pmc, estimated_reward, estimated_variance, nb_run)
         return render_template('index.html', title='MCpMC', file=file, form=form, result=result.decode('utf8'), reward=estimated_reward, variance=estimated_variance, text=text)
 
     result = None
