@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Modèle</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {{ file.hidden_tag() }}
+        <p>
+            {{ file.file.label }} {{ file.file() }}<br>
+        </p>
+        <p>{{ file.submit() }}</p>
+    </form>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.text.label }}<br>{{ form.text(rows="8", cols="80") }}<br>
+            {{ form.nb_run.label }} {{ form.nb_run() }}<br>
+            {{ form.len_run.label }} {{ form.len_run() }}<br>
+            {{ form.params.label }}{{ form.params() }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    {% if result != None %}
+    <p>
+        <!-- <img src="data:image/png;base64,{{ result }}" alt=""><br> -->
+        Poly reward : {{ reward }}
+    </p>
+    <hr>
+    <p>
+        Poly variance : {{ variance }}
+    </p>
+    {% endif %}
+{% endblock %}
