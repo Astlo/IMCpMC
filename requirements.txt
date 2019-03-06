@@ -3,3 +3,4 @@ memory_profiler
 matplotlib
 ply
 flask
+flask_wtf
