@@ -1,4 +1,4 @@
-import MCpMC.modules
+import app.MCpMC.modules
 
 def mysub(exp, dic):
     """ sympy subs but filtering local dictionary with only variables in exp"""
