@@ -1,0 +1,5 @@
+sympy
+memory_profiler
+matplotlib
+ply
+flask
